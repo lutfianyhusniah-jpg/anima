@@ -18,7 +18,7 @@ body {
     align-items: center;
 }
 
-/* KANVAS TETAP */
+/* KANVAS UTAMA */
 .container {
     position: relative;
 
@@ -31,10 +31,8 @@ body {
 /* SEMUA GAMBAR */
 .container img {
     position: absolute;
-
     width: 100px;
     height: 100px;
-
     object-fit: contain;
 }
 
@@ -100,13 +98,12 @@ body {
 
 
 /* =========================
-   IKON TAMBAHAN
+   ICON TAMBAHAN
 ========================= */
 
 .coin {
     width: 90px !important;
     height: 90px !important;
-
     left: 355px !important;
     top: 155px !important;
 }
@@ -114,7 +111,6 @@ body {
 .loc {
     width: 90px !important;
     height: 90px !important;
-
     left: 1105px !important;
     top: 155px !important;
 }
@@ -122,7 +118,6 @@ body {
 .ceklis {
     width: 90px !important;
     height: 90px !important;
-
     left: 105px !important;
     top: 395px !important;
 }
@@ -130,7 +125,6 @@ body {
 .paket {
     width: 90px !important;
     height: 90px !important;
-
     left: 355px !important;
     top: 395px !important;
 }
@@ -138,7 +132,6 @@ body {
 .luc {
     width: 90px !important;
     height: 90px !important;
-
     left: 605px !important;
     top: 395px !important;
 }
@@ -146,7 +139,6 @@ body {
 .air {
     width: 90px !important;
     height: 90px !important;
-
     left: 855px !important;
     top: 395px !important;
 }
@@ -154,14 +146,13 @@ body {
 .tulisan {
     width: 90px !important;
     height: 90px !important;
-
     left: 1105px !important;
     top: 395px !important;
 }
 
 
 /* =========================
-   RESPONSIVE HP
+   HP
 ========================= */
 
 @media (max-width: 1200px) {
