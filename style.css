@@ -1,4 +1,4 @@
-/* Reset dasar untuk konsistensi */
+/* ===== RESET & GLOBAL ===== */
 * {
     margin: 0;
     padding: 0;
@@ -6,89 +6,141 @@
 }
 
 body {
-    margin: 0;
     background: #ede491;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: sans-serif; /* opsional */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
 }
 
-/* Container grid utama */
-.container {
-    width: 90%;
+.main-wrapper {
+    width: 100%;
     max-width: 1200px;
+    background: rgba(255, 255, 255, 0.15); /* efek transparan */
+    border-radius: 30px;
+    padding: 30px 20px 40px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(2px);
+}
+
+/* ===== HEADER CUACA ===== */
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 15px 30px;
+    border-radius: 60px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    font-weight: 600;
+    color: #1e2b3a;
+}
+
+.weather-temp {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.weather-condition {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.weather-time {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.weather-date {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* ===== GRID IKON ===== */
+.container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 30px 40px;   /* jarak antar baris & kolom */
+    gap: 30px 20px;
     justify-items: center;
     align-items: center;
-    padding: 20px 0;
 }
 
-/* Gaya dasar semua gambar di dalam container */
+/* Gaya dasar semua gambar */
 .container img {
-    width: 100px;      /* ukuran dasar */
+    width: 100px;
     height: auto;
-    display: block;    /* hilangkan spasi bawah */
+    display: block;
     object-fit: contain;
-}
-
-/* Ukuran khusus untuk beberapa ikon agar lebih proporsional */
-.money {
-    width: 100px;      /* sama dengan default */
-}
-.coin {
-    width: 80px;
-}
-.loc {
-    width: 75px;
-}
-.ceklis {
-    width: 80px;
-}
-.paket {
-    width: 85px;
-}
-.luc {
-    width: 80px;
-}
-.air {
-    width: 80px;
-}
-.tulisan {
-    width: 80px;
-}
-.plane {
-    width: 110px;      /* pesawat lebih besar */
-}
-.ship {
-    width: 110px;      /* kapal lebih besar */
-}
-/* Tambahkan ukuran lain jika diperlukan */
-
-/* Efek hover untuk sentuhan interaktif (opsional) */
-.container img:hover {
-    transform: scale(1.05);
     transition: transform 0.2s ease;
 }
 
-/* ---------- Responsif untuk layar kecil ---------- */
+/* Ukuran khusus untuk beberapa ikon agar proporsional */
+.money { width: 100px; }
+.coin { width: 80px; }
+.loc { width: 75px; }
+.ceklis { width: 80px; }
+.paket { width: 85px; }
+.luc { width: 80px; }
+.air { width: 80px; }
+.tulisan { width: 80px; }
+.plane { width: 110px; }
+.ship { width: 110px; }
+/* tambahkan jika perlu */
+
+/* Efek hover */
+.container img:hover {
+    transform: scale(1.08);
+}
+
+/* ===== RESPONSIF ===== */
 @media (max-width: 768px) {
+    .weather-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 15px 20px;
+        border-radius: 30px;
+    }
+    .weather-temp { font-size: 1.8rem; }
+    .weather-condition { font-size: 1.2rem; }
+    .weather-time { font-size: 1.3rem; }
+    .weather-date { font-size: 1rem; }
+
     .container {
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 25px 15px;
     }
 }
 
 @media (max-width: 480px) {
+    .main-wrapper { padding: 15px 10px; }
+    .weather-header { padding: 12px 15px; }
+    .weather-temp { font-size: 1.5rem; }
+    .weather-condition { font-size: 1rem; }
+    .weather-time { font-size: 1.1rem; }
+    .weather-date { font-size: 0.9rem; }
+
     .container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 20px 10px;
     }
     .container img {
-        width: 70px;   /* perkecil di HP */
+        width: 70px;
     }
-    /* sesuaikan ukuran khusus jika perlu */
+    /* sesuaikan ukuran khusus untuk HP */
+    .coin { width: 60px; }
+    .loc { width: 55px; }
+    .ceklis { width: 60px; }
+    .paket { width: 65px; }
+    .luc { width: 60px; }
+    .air { width: 60px; }
+    .tulisan { width: 60px; }
+    .plane { width: 80px; }
+    .ship { width: 80px; }
 }
