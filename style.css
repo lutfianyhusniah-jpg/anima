@@ -37,9 +37,7 @@ body {
 }
 
 
-/* =========================
-   BARIS ATAS
-========================= */
+/*BARIS ATAS*/
 
 .truck {
     left: 100px;
@@ -67,9 +65,7 @@ body {
 }
 
 
-/* =========================
-   BARIS BAWAH
-========================= */
+/* BARIS BAWAH */
 
 .box {
     left: 100px;
@@ -97,9 +93,7 @@ body {
 }
 
 
-/* =========================
-   ICON TAMBAHAN
-========================= */
+/* ICON TAMBAHAN */
 
 .coin {
     width: 90px !important;
@@ -119,14 +113,14 @@ body {
     width: 90px !important;
     height: 90px !important;
     left: 105px !important;
-    top: 395px !important;
+    top: 400px !important;
 }
 
 .paket {
     width: 90px !important;
     height: 90px !important;
     left: 355px !important;
-    top: 395px !important;
+    top: 401px !important;
 }
 
 .luc {
@@ -150,9 +144,7 @@ body {
     top: 395px !important;
 }
 
-/* =========================
-   HP
-========================= */
+/* HP */
 
 @media (max-width: 1200px) {
 
