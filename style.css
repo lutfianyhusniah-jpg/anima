@@ -1,94 +1,177 @@
-body{
-
-margin:0;
-background:#ede491;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-
+* {
+    box-sizing: border-box;
 }
 
-.container{
-
-width:90%;
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:40px 40px;
-justify-items:center;
-
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-img{
+body {
+    background: #ede491;
 
-width:100px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.hand-container{
+/* KANVAS TETAP */
+.container {
     position: relative;
-    width: 120px;
-    height: 120px;
+
+    width: 1200px;
+    height: 700px;
+
+    flex-shrink: 0;
 }
 
-.money{
+/* SEMUA GAMBAR */
+.container img {
+    position: absolute;
+
     width: 100px;
+    height: 100px;
+
+    object-fit: contain;
 }
 
-.coin{
-    position: absolute;
-    width: 90px;
 
-    top: 165px;      /* naik atau turun */
-    left: 365px;    /* geser kanan atau kiri */
+/* =========================
+   BARIS ATAS
+========================= */
 
+.truck {
+    left: 100px;
+    top: 200px;
 }
 
-.loc{
-    position: absolute;
-    width: 90px;
-
-    top: 160px;      /* naik atau turun */
-    left: 1077px;    /* geser kanan atau kiri */
-
+.money {
+    left: 350px;
+    top: 200px;
 }
 
-.ceklis{
-    position: absolute;
-    width: 90px;
-
-    top: 317px;      /* naik atau turun */
-    left: 118px;    /* geser kanan atau kiri */
+.calendar {
+    left: 600px;
+    top: 200px;
 }
 
-.paket{
-    position: absolute;
-    width: 90px;
-
-    top: 323px;      /* naik atau turun */
-    left: 357px;    /* geser kanan atau kiri */
+.plane {
+    left: 850px;
+    top: 200px;
 }
 
-.luc{
-    position: absolute;
-    width: 90px;
-
-    top: 317px;      /* naik atau turun */
-    left: 604px;    /* geser kanan atau kiri */
+.location {
+    left: 1100px;
+    top: 200px;
 }
 
-.air{
-    position: absolute;
-    width: 90px;
 
-    top: 321px;      /* naik atau turun */
-    left: 830px;    /* geser kanan atau kiri */
+/* =========================
+   BARIS BAWAH
+========================= */
+
+.box {
+    left: 100px;
+    top: 400px;
 }
 
-.tulisan{
-    position: absolute;
-    width: 90px;
+.courier {
+    left: 350px;
+    top: 400px;
+}
 
-    top: 317px;      /* naik atau turun */
-    left: 1068px;    /* geser kanan atau kiri */
+.globe {
+    left: 600px;
+    top: 400px;
+}
+
+.ship {
+    left: 850px;
+    top: 400px;
+}
+
+.document {
+    left: 1100px;
+    top: 400px;
+}
+
+
+/* =========================
+   IKON TAMBAHAN
+========================= */
+
+.coin {
+    width: 90px !important;
+    height: 90px !important;
+
+    left: 355px !important;
+    top: 155px !important;
+}
+
+.loc {
+    width: 90px !important;
+    height: 90px !important;
+
+    left: 1105px !important;
+    top: 155px !important;
+}
+
+.ceklis {
+    width: 90px !important;
+    height: 90px !important;
+
+    left: 105px !important;
+    top: 395px !important;
+}
+
+.paket {
+    width: 90px !important;
+    height: 90px !important;
+
+    left: 355px !important;
+    top: 395px !important;
+}
+
+.luc {
+    width: 90px !important;
+    height: 90px !important;
+
+    left: 605px !important;
+    top: 395px !important;
+}
+
+.air {
+    width: 90px !important;
+    height: 90px !important;
+
+    left: 855px !important;
+    top: 395px !important;
+}
+
+.tulisan {
+    width: 90px !important;
+    height: 90px !important;
+
+    left: 1105px !important;
+    top: 395px !important;
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 1200px) {
+
+    .container {
+        transform: scale(
+            min(
+                calc(100vw / 1200),
+                calc(100vh / 700)
+            )
+        );
+    }
 }
