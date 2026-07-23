@@ -1,146 +1,94 @@
-/* ===== RESET & GLOBAL ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+
+margin:0;
+background:#ede491;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
 }
 
-body {
-    background: #ede491;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 20px;
+.container{
+
+width:90%;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:40px 40px;
+justify-items:center;
+
 }
 
-.main-wrapper {
-    width: 100%;
-    max-width: 1200px;
-    background: rgba(255, 255, 255, 0.15); /* efek transparan */
-    border-radius: 30px;
-    padding: 30px 20px 40px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-    backdrop-filter: blur(2px);
+img{
+
+width:100px;
+
 }
 
-/* ===== HEADER CUACA ===== */
-.weather-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.25);
-    padding: 15px 30px;
-    border-radius: 60px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-    gap: 10px 20px;
-    font-weight: 600;
-    color: #1e2b3a;
+.hand-container{
+    position: relative;
+    width: 120px;
+    height: 120px;
 }
 
-.weather-temp {
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.weather-condition {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    opacity: 0.9;
-}
-
-.weather-time {
-    font-size: 1.6rem;
-    font-weight: 500;
-}
-
-.weather-date {
-    font-size: 1.2rem;
-    opacity: 0.8;
-}
-
-/* ===== GRID IKON ===== */
-.container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px 20px;
-    justify-items: center;
-    align-items: center;
-}
-
-/* Gaya dasar semua gambar */
-.container img {
+.money{
     width: 100px;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    transition: transform 0.2s ease;
 }
 
-/* Ukuran khusus untuk beberapa ikon agar proporsional */
-.money { width: 100px; }
-.coin { width: 80px; }
-.loc { width: 75px; }
-.ceklis { width: 80px; }
-.paket { width: 85px; }
-.luc { width: 80px; }
-.air { width: 80px; }
-.tulisan { width: 80px; }
-.plane { width: 110px; }
-.ship { width: 110px; }
-/* tambahkan jika perlu */
+.coin{
+    position: absolute;
+    width: 90px;
 
-/* Efek hover */
-.container img:hover {
-    transform: scale(1.08);
+    top: 165px;      /* naik atau turun */
+    left: 365px;    /* geser kanan atau kiri */
+
 }
 
-/* ===== RESPONSIF ===== */
-@media (max-width: 768px) {
-    .weather-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        padding: 15px 20px;
-        border-radius: 30px;
-    }
-    .weather-temp { font-size: 1.8rem; }
-    .weather-condition { font-size: 1.2rem; }
-    .weather-time { font-size: 1.3rem; }
-    .weather-date { font-size: 1rem; }
+.loc{
+    position: absolute;
+    width: 90px;
 
-    .container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px 15px;
-    }
+    top: 160px;      /* naik atau turun */
+    left: 1067px;    /* geser kanan atau kiri */
+
 }
 
-@media (max-width: 480px) {
-    .main-wrapper { padding: 15px 10px; }
-    .weather-header { padding: 12px 15px; }
-    .weather-temp { font-size: 1.5rem; }
-    .weather-condition { font-size: 1rem; }
-    .weather-time { font-size: 1.1rem; }
-    .weather-date { font-size: 0.9rem; }
+.ceklis{
+    position: absolute;
+    width: 90px;
 
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 10px;
-    }
-    .container img {
-        width: 70px;
-    }
-    /* sesuaikan ukuran khusus untuk HP */
-    .coin { width: 60px; }
-    .loc { width: 55px; }
-    .ceklis { width: 60px; }
-    .paket { width: 65px; }
-    .luc { width: 60px; }
-    .air { width: 60px; }
-    .tulisan { width: 60px; }
-    .plane { width: 80px; }
-    .ship { width: 80px; }
+    top: 317px;      /* naik atau turun */
+    left: 118px;    /* geser kanan atau kiri */
+}
+
+.paket{
+    position: absolute;
+    width: 90px;
+
+    top: 323px;      /* naik atau turun */
+    left: 357px;    /* geser kanan atau kiri */
+}
+
+.luc{
+    position: absolute;
+    width: 90px;
+
+    top: 317px;      /* naik atau turun */
+    left: 598px;    /* geser kanan atau kiri */
+}
+
+.air{
+    position: absolute;
+    width: 90px;
+
+    top: 321px;      /* naik atau turun */
+    left: 826px;    /* geser kanan atau kiri */
+}
+
+.tulisan{
+    position: absolute;
+    width: 90px;
+
+    top: 317px;      /* naik atau turun */
+    left: 1062px;    /* geser kanan atau kiri */
 }
